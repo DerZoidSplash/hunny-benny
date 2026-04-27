@@ -9,6 +9,7 @@ body {
     color: #000000;
     font-family: "Baloo da 2", sans-serif;
     margin: 0px;
+    overflow-x: hidden;
 }
 
 header {
@@ -388,13 +389,31 @@ footer {
         padding: 50px 25px;
     }
 
-    .specials-grid {
-        grid-template-columns: 1fr;
-        row-gap: 50px;
+    .specials h1 {
+        margin-left: -25px;
+        margin-right: -25px;
+        margin-top: -50px;
+        font-size: 2.4rem;
     }
 
-    .special-wide {
+    .specials-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+        justify-items: center;
+    }
+
+    .special-item,
+    .special-wide,
+    .special-item:nth-child(4) {
         grid-column: auto;
+        justify-self: center;
+        width: 100%;
         max-width: 360px;
+    }
+
+    .specials-grid img {
+        max-width: 320px;
+        height: auto;
     }
 }
